@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <script>
+    function getPlacaFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("placa")?.toUpperCase();
+    }
+    window.onload = function () {
+      const placa = getPlacaFromURL();
+      if (placa) {
+        const destino = `https://script.google.com/macros/s/AKfycbzrjRL85ybAASNGRzlblRtYD3F_F5vgfC_naJZ-npG-c3Hx6NYAWdmEzpew1peCeQca/exec?placa=${placa}`;
+        window.location.href = destino;
+      } else {
+        document.body.innerHTML = "<h2>Erro: Placa não informada na URL.</h2>";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecionando...</p>
+</body>
+</html>
