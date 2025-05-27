@@ -11,7 +11,7 @@
     window.onload = function () {
       const placa = getPlacaFromURL();
       if (placa) {
-        const destino = `https://script.google.com/macros/s/AKfycbzrjRL85ybAASNGRzlblRtYD3F_F5vgfC_naJZ-npG-c3Hx6NYAWdmEzpew1peCeQca/exec?placa=${placa}`;
+        const destino = `https://script.google.com/macros/s/AKfycbxodIey0sBBC0oo3PAOsKBrqQXkISl2PkYHto5GqgwNOPiDVxHbS6WAkb_AhHgZk7nT/exec?placa=${placa}`;
         window.location.href = destino;
       } else {
         document.body.innerHTML = "<h2>Erro: Placa não informada na URL.</h2>";
